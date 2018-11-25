@@ -28,8 +28,8 @@ def play(songs)
   selection = gets.chomp
   if songs.include?(selection)
     puts "Playing #{selection}"
-  elsif (1...9).include?(requested_song.to_i)
-    puts "Playing #{songs[requested_song.to_i - 1]}"
+  elsif (1..9).include?(selection.to_i)
+    puts "Playing #{songs[selection.to_i - 1]}"
   else
     puts "Invalid input, please try again"
   end
@@ -41,14 +41,14 @@ end
 
 def run(songs)
   puts "Please enter a command:"
-  input = gets.chomp.downcase
-    unless input == "exit"
+  command = gets.chomp
+    unless command == "exit"
       puts "Please enter a command:"
-      if input == "help"
+      if command == "help"
         help
-      elsif input == "list"
+      elsif command == "list"
         list(songs)
-      elsif input == "play"
+      elsif command == "play"
         play(songs)
     end
   end
