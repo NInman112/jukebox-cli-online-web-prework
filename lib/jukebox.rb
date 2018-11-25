@@ -21,7 +21,6 @@ end
 
 def list(songs)
   song.each_with_index {|song, number + 1| puts "#{number}. #{song}"}
-  binding.pry
 end
 
 def play(songs)
