@@ -20,7 +20,7 @@ def help
 end
 
 def list(songs)
-  song.each_with_index {|song, number| puts "#{number + 1}. #{song}"}
+  songs.each_with_index {|song, number| puts "#{number + 1}. #{song}"}
 end
 
 def play(songs)
